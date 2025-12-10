@@ -2,10 +2,9 @@
 import { Button } from "@/components/ui/button";
 import { Download, MapPin, Share2 } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
-  const [generatedFilesCount, setGeneratedFilesCount] = useState(0);
 
   const fetchData = async () => {
     try {
@@ -13,8 +12,6 @@ export default function Home() {
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
-      const data = await response.json();
-      setGeneratedFilesCount(data.data.count);
     } catch (error) {
       console.error("Error fetching run files count:", error);
     }
@@ -51,7 +48,6 @@ export default function Home() {
               </Button>
             </Link>
           </div>
-     
         </div>
       </div>
 
