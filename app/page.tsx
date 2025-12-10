@@ -51,10 +51,7 @@ export default function Home() {
               </Button>
             </Link>
           </div>
-          {/* Run files generated counter */}
-          {/* <h2 className="text-2xl font-bold mt-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent font-mono">
-            Run files generated: {generatedFilesCount || "loading..."}
-          </h2> */}
+     
         </div>
       </div>
 
